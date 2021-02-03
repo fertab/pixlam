@@ -9,7 +9,7 @@ if(isset($_POST['email']) && $_POST['email'] != '') {
         $userEmail = $_POST['email'];
         $userMessage = $_POST['message'];
 
-        $to = "info@pixlam.com";
+        $to = "fer.tab86@gmail.com";
         $body = "";
 
         $body .= "From: ".$userName. "\r\n";
