@@ -58,7 +58,7 @@
 $headers = 'From: '.$email."\r\n".
 'Reply-To: '.$email."\r\n" .
 'X-Mailer: PHP/' . phpversion();
-@mail($to, $message, $headers);
+mail($to, $message, $headers);
 header('Location: greet.html');
 
 ?>
