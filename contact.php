@@ -8,12 +8,12 @@ set_error_handler("var_dump");
     $email = $_POST['email']; // this is the sender's Email address
     $name = $_POST['name'];
     $message = $name . " " . " wrote the following:" . "\n\n" . $_POST['message'];
-    $aditional_headers = array ("From:" . $email , "Reply-To:" . $email . "X-Mailer: PHP/" . PHP_VERSION);
+    $headers = "From: info@pixlam.com";
+    $headers .= "Reply-To: $email";
 
 
-    if ($_POST['message']) {
-    mail('info@pixlam.com',$message,[$aditional_headers]);
+    mail($to,$message,$headers);
     header('Location: greet.html');
-    }
+
 
 ?>
