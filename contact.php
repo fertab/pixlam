@@ -8,8 +8,9 @@ set_error_handler("var_dump");
     $email = $_POST['email']; // this is the sender's Email address
     $name = $_POST['name'];
     $message = $name . " " . " wrote the following:" . "\n\n" . $_POST['message'];
-    $headers = "From: info@pixlam.com";
+    $headers = "From: $email";
     $headers .= "Reply-To: $email";
+    $headers .= "X-Mailer: PHP/" . PHP_VERSION;
 
 
     mail($to,$message,$headers);
